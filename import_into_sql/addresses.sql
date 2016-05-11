@@ -15,6 +15,6 @@ CREATE TABLE IF NOT EXISTS addresses (
 LOAD DATA INFILE '$PATH$/data/Addresses.csv'
     INTO TABLE addresses
     FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\n'
+    LINES TERMINATED BY '\r\n'
     IGNORE 1 LINES
 (address, icij_id, valid_until, country_codes, countries, node_id, sourceID);

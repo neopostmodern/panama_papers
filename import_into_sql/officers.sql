@@ -15,6 +15,6 @@ CREATE TABLE IF NOT EXISTS officers (
 LOAD DATA INFILE '$PATH$/data/Officers.csv'
     INTO TABLE officers
     FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\n'
+    LINES TERMINATED BY '\r\n'
     IGNORE 1 LINES
 (name, icij_id, valid_until, country_codes, countries, node_id, sourceID);

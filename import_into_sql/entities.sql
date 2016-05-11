@@ -1,3 +1,5 @@
+USE panama_leaks;
+
 DROP TABLE IF EXISTS entities;
 CREATE TABLE IF NOT EXISTS entities (
   name VARCHAR(200),
@@ -27,7 +29,7 @@ CREATE TABLE IF NOT EXISTS entities (
 LOAD DATA INFILE '$PATH$/data/Entities.csv'
     INTO TABLE entities
     FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
-    LINES TERMINATED BY '\n'
+    LINES TERMINATED BY '\r\n'
     IGNORE 1 LINES
 (name, original_name, former_name, jurisdiction, jurisdiction_description, company_type, address, internal_id,
  @incorporation_date_raw, @inactivation_date_raw, @struck_off_date_raw, @dorm_date_raw, status, service_provider, @ibcRUC_raw, country_codes, countries,

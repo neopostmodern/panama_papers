@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS entities (
   note VARCHAR(500),
   valid_until VARCHAR(100),
   node_id INT,
-  sourceID VARCHAR(100)
+  sourceID VARCHAR(100),
+  PRIMARY KEY (node_id)
 ) ENGINE=innodb;
 
 
